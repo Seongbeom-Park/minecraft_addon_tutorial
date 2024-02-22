@@ -11,3 +11,9 @@ make install
 cd behaviorpack
 make install
 ```
+
+## [개체 추가 안내](https://learn.microsoft.com/ko-kr/minecraft/creator/documents/introductiontoaddentity)
+```bash
+cd introductiontoaddentity
+make install
+```
