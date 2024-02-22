@@ -17,3 +17,6 @@ make install
 cd introductiontoaddentity
 make install
 ```
+
+### 파일 구조
+![filestructure.png](introductiontoaddentity/filestructure.png)

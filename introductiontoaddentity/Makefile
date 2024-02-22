@@ -1,9 +1,9 @@
 include ../.env
 
-RESOURCE_PACKS=My_RESOURCE_Pack My_RESOURCE_Pack2
-BEHAVIOR_PACKS=My_BEHAVIOR_Pack
+RESOURCE_PACKS=robot_example_min_resources
+BEHAVIOR_PACKS=robot_example_min_behavior
 
-TARGET=My_RESOURCE_Pack.mcpack My_BEHAVIOR_Pack.mcpack
+TARGET=My_ADDON.mcaddon
 
 .PHONY: all
 all: install
@@ -25,8 +25,12 @@ mcpack: $(RESOURCE_PACKS:%=%.mcpack) $(BEHAVIOR_PACKS:%=%.mcpack)
 	zip $@ $^
 $(RESOURCE_PACKS:%=%.mcpack) $(BEHAVIOR_PACKS:%=%.mcpack):
 
-.PHONY: clean clean/resource clean/behavior clean/mcpack
-clean: clean/resource clean/behavior clean/mcpack
+.PHONY: mcaddon
+mcaddon: $(RESOURCE_PACKS:%=%.mcpack) $(BEHAVIOR_PACKS:%=%.mcpack)
+	zip $(TARGET) $^
+
+.PHONY: clean clean/resource clean/behavior clean/mcpack clean/mcaddon
+clean: clean/resource clean/behavior clean/mcpack clean/mcaddon
 clean/resource: $(RESOURCE_PACKS:%=clean/resource/%)
 clean/behavior: $(BEHAVIOR_PACKS:%=clean/behavior/%)
 clean/resource/%: DESTINATION = $(COM_MOJANG)/development_resource_packs
@@ -37,6 +41,8 @@ clean/%:
 $(RESOURCE_PACKS:%=clean/resource/%) $(BEHAVIOR_PACKS:%=clean/behavior/%):
 clean/mcpack:
 	rm -f *.mcpack
+clean/mcaddon:
+	rm -f *.mcaddon
 
 uuidgen:
 	uuidgen
