@@ -1,7 +1,7 @@
 include ../.env
 
-RESOURCE_PACKS=robot_example_min_resources
-BEHAVIOR_PACKS=robot_example_min_behavior
+RESOURCE_PACKS=robot_resource
+BEHAVIOR_PACKS=robot_behavior
 
 TARGET=My_ADDON.mcaddon
 

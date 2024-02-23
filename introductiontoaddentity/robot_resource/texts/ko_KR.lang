@@ -1,0 +1,2 @@
+entity.compass:robot.name=로봇
+item.spawn_egg.entity.compass:robot.name=로봇 생성
