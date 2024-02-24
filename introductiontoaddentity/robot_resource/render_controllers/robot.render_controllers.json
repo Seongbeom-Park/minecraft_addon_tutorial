@@ -1,10 +1,22 @@
 {
-    "format_version": "1.8.0",
-    "render_controllers": {
-        "controller.render.robot": {
-            "geometry": "Geometry.default",
-            "materials": [ { "*": "Material.default" }],
-            "textures": [ "Texture.default" ]
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.robot": {
+      "arrays": {
+        "textures": {
+          "Array.variant": [
+            "Texture.default",
+            "Texture.variant_b",
+            "Texture.variant_c"
+          ]
         }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        { "*": "Material.default" },
+        { "*_arm": "Material.transparent" }
+      ],
+      "textures": ["Array.variant[ query.variant ]"]
     }
+  }
 }

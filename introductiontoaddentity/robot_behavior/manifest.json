@@ -3,12 +3,11 @@
   "header": {
     "description": "Robot Behavior Pack",
     "name": "Robot Behavior Pack",
-    "uuid":"7f8fb8b8-05e8-4e84-94de-e728768083ee",
+    "uuid": "7f8fb8b8-05e8-4e84-94de-e728768083ee",
     "version": [1, 0, 0],
     "min_engine_version": [1, 16, 0]
   },
-  "modules":
-  [
+  "modules": [
     {
       "description": "My Robot Add-On!",
       "type": "data",
@@ -18,7 +17,7 @@
   ],
   "dependencies": [
     {
-      "uuid":"3579cfe7-f6a5-428b-8f60-021f803cb3f9",
+      "uuid": "3579cfe7-f6a5-428b-8f60-021f803cb3f9",
       "version": [1, 0, 0]
     }
   ]

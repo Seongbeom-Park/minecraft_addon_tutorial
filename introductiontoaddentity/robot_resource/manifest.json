@@ -3,12 +3,11 @@
   "header": {
     "description": "Robot Resource Pack",
     "name": "Robot Resource Pack",
-    "uuid":"3579cfe7-f6a5-428b-8f60-021f803cb3f9",
+    "uuid": "3579cfe7-f6a5-428b-8f60-021f803cb3f9",
     "version": [1, 0, 0],
     "min_engine_version": [1, 16, 0]
   },
-  "modules":
-  [
+  "modules": [
     {
       "description": "My Robot Add-On!",
       "type": "resources",
